@@ -1,0 +1,716 @@
+<?xml version='1.0' encoding='utf-8'?>
+<mlt title="Anonymous Submission" version="0.9.0" root="/home/livre" LC_NUMERIC="pt_BR.UTF-8">
+ <profile width="1440" display_aspect_den="9" colorspace="709" frame_rate_den="1" description="HDV 1440x1080i 25 fps" height="1080" display_aspect_num="16" frame_rate_num="25" progressive="0" sample_aspect_num="4" sample_aspect_den="3"/>
+ <producer in="0" out="500" id="black">
+  <property name="mlt_type">producer</property>
+  <property name="length">15000</property>
+  <property name="eof">pause</property>
+  <property name="resource">black</property>
+  <property name="aspect_ratio">0</property>
+  <property name="mlt_service">colour</property>
+ </producer>
+ <playlist id="black_track">
+  <entry in="0" out="1257" producer="black"/>
+ </playlist>
+ <playlist id="playlist1"/>
+ <playlist id="playlist2"/>
+ <playlist id="playlist3"/>
+ <producer in="0" out="427" id="15_1">
+  <property name="mlt_type">producer</property>
+  <property name="length">428</property>
+  <property name="eof">pause</property>
+  <property name="resource">Área de Trabalho/dia 31 audio mid/DSC_0031.MOV</property>
+  <property name="meta.media.nb_streams">2</property>
+  <property name="meta.media.0.stream.type">video</property>
+  <property name="meta.media.0.stream.frame_rate">25</property>
+  <property name="meta.media.0.stream.sample_aspect_ratio">0</property>
+  <property name="meta.media.0.codec.width">1280</property>
+  <property name="meta.media.0.codec.height">720</property>
+  <property name="meta.media.0.codec.frame_rate">25</property>
+  <property name="meta.media.0.codec.pix_fmt">yuvj420p</property>
+  <property name="meta.media.0.codec.sample_aspect_ratio">1</property>
+  <property name="meta.media.0.codec.colorspace">601</property>
+  <property name="meta.media.0.codec.name">h264</property>
+  <property name="meta.media.0.codec.long_name">H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10</property>
+  <property name="meta.media.0.codec.bit_rate">11459371</property>
+  <property name="meta.attr.0.stream.creation_time.markup">2009-10-07 19:21:13</property>
+  <property name="meta.attr.0.stream.language.markup">eng</property>
+  <property name="meta.media.1.stream.type">audio</property>
+  <property name="meta.media.1.codec.sample_fmt">s16</property>
+  <property name="meta.media.1.codec.sample_rate">24000</property>
+  <property name="meta.media.1.codec.channels">1</property>
+  <property name="meta.media.1.codec.name">pcm_s16le</property>
+  <property name="meta.media.1.codec.long_name">PCM signed 16-bit little-endian</property>
+  <property name="meta.media.1.codec.bit_rate">0</property>
+  <property name="meta.attr.1.stream.creation_time.markup">2009-10-07 19:21:13</property>
+  <property name="meta.attr.1.stream.language.markup">eng</property>
+  <property name="meta.attr.major_brand.markup">qt  </property>
+  <property name="meta.attr.minor_version.markup">537331968</property>
+  <property name="meta.attr.compatible_brands.markup">qt  niko</property>
+  <property name="meta.attr.creation_time.markup">2009-10-07 19:21:13</property>
+  <property name="seekable">1</property>
+  <property name="meta.media.sample_aspect_num">1</property>
+  <property name="meta.media.sample_aspect_den">1</property>
+  <property name="aspect_ratio">1</property>
+  <property name="audio_index">1</property>
+  <property name="video_index">0</property>
+  <property name="mlt_service">avformat</property>
+  <property name="meta.media.frame_rate_num">25</property>
+  <property name="meta.media.frame_rate_den">1</property>
+  <property name="meta.media.colorspace">601</property>
+  <property name="meta.media.width">1280</property>
+  <property name="meta.media.height">720</property>
+  <property name="meta.media.top_field_first">0</property>
+  <property name="meta.media.progressive">1</property>
+ </producer>
+ <playlist id="playlist4">
+  <blank length="830"/>
+  <entry in="0" out="345" producer="15_1"/>
+  <entry in="346" out="427" producer="15_1">
+   <filter id="dynamictext">
+    <property name="track">0</property>
+    <property name="argument">APLICATIVO SENSORIAL</property>
+    <property name="geometry">0/0:1440x1080:100</property>
+    <property name="family">DejaVu Sans</property>
+    <property name="size">190</property>
+    <property name="weight">850</property>
+    <property name="fgcolour">0x000000ff</property>
+    <property name="bgcolour">0xff8000ff</property>
+    <property name="olcolour">0x00000000</property>
+    <property name="pad">332</property>
+    <property name="halign">centre</property>
+    <property name="valign">middle</property>
+    <property name="outline">2</property>
+    <property name="mlt_type">filter</property>
+    <property name="mlt_service">dynamictext</property>
+    <property name="kdenlive_id">dynamictext</property>
+    <property name="tag">dynamictext</property>
+    <property name="kdenlive_ix">1</property>
+    <property name="kdenlive_info"/>
+   </filter>
+  </entry>
+  <filter id="gain">
+   <property name="track">0</property>
+   <property name="window">75</property>
+   <property name="max_gain">20dB</property>
+   <property name="mlt_type">filter</property>
+   <property name="mlt_service">volume</property>
+   <property name="kdenlive_id">gain</property>
+   <property name="tag">volume</property>
+   <property name="kdenlive_ix">1</property>
+   <property name="kdenlive_info"/>
+   <property name="gain">1</property>
+   <property name="disable">1</property>
+  </filter>
+  <filter id="ladspa.1413">
+   <property name="track">0</property>
+   <property name="mlt_type">filter</property>
+   <property name="mlt_service">ladspa.1413</property>
+   <property name="kdenlive_id">ladspa.1413</property>
+   <property name="tag">ladspa.1413</property>
+   <property name="kdenlive_ix">2</property>
+   <property name="kdenlive_info"/>
+   <property name="0">-48,9</property>
+   <property name="1">1</property>
+   <property name="2">0</property>
+   <property name="wetness">1</property>
+   <property name="disable">1</property>
+  </filter>
+ </playlist>
+ <producer in="0" out="499" id="3">
+  <property name="mlt_type">producer</property>
+  <property name="length">500</property>
+  <property name="eof">pause</property>
+  <property name="resource">Área de Trabalho/dia 31 audio mid/DSC_0022.MOV</property>
+  <property name="meta.media.nb_streams">2</property>
+  <property name="meta.media.0.stream.type">video</property>
+  <property name="meta.media.0.stream.frame_rate">25</property>
+  <property name="meta.media.0.stream.sample_aspect_ratio">0</property>
+  <property name="meta.media.0.codec.width">1280</property>
+  <property name="meta.media.0.codec.height">720</property>
+  <property name="meta.media.0.codec.frame_rate">25</property>
+  <property name="meta.media.0.codec.pix_fmt">yuvj420p</property>
+  <property name="meta.media.0.codec.sample_aspect_ratio">1</property>
+  <property name="meta.media.0.codec.colorspace">601</property>
+  <property name="meta.media.0.codec.name">h264</property>
+  <property name="meta.media.0.codec.long_name">H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10</property>
+  <property name="meta.media.0.codec.bit_rate">10759467</property>
+  <property name="meta.attr.0.stream.creation_time.markup">2009-10-07 19:05:59</property>
+  <property name="meta.attr.0.stream.language.markup">eng</property>
+  <property name="meta.media.1.stream.type">audio</property>
+  <property name="meta.media.1.codec.sample_fmt">s16</property>
+  <property name="meta.media.1.codec.sample_rate">24000</property>
+  <property name="meta.media.1.codec.channels">1</property>
+  <property name="meta.media.1.codec.name">pcm_s16le</property>
+  <property name="meta.media.1.codec.long_name">PCM signed 16-bit little-endian</property>
+  <property name="meta.media.1.codec.bit_rate">0</property>
+  <property name="meta.attr.1.stream.creation_time.markup">2009-10-07 19:05:59</property>
+  <property name="meta.attr.1.stream.language.markup">eng</property>
+  <property name="meta.attr.major_brand.markup">qt  </property>
+  <property name="meta.attr.minor_version.markup">537331968</property>
+  <property name="meta.attr.compatible_brands.markup">qt  niko</property>
+  <property name="meta.attr.creation_time.markup">2009-10-07 19:05:59</property>
+  <property name="seekable">1</property>
+  <property name="meta.media.sample_aspect_num">1</property>
+  <property name="meta.media.sample_aspect_den">1</property>
+  <property name="aspect_ratio">1</property>
+  <property name="audio_index">1</property>
+  <property name="video_index">0</property>
+  <property name="mlt_service">avformat</property>
+  <property name="meta.media.frame_rate_num">25</property>
+  <property name="meta.media.frame_rate_den">1</property>
+  <property name="meta.media.colorspace">601</property>
+  <property name="meta.media.width">1280</property>
+  <property name="meta.media.height">720</property>
+  <property name="meta.media.top_field_first">0</property>
+  <property name="meta.media.progressive">1</property>
+ </producer>
+ <producer in="0" out="82" id="5">
+  <property name="mlt_type">producer</property>
+  <property name="length">83</property>
+  <property name="eof">pause</property>
+  <property name="resource">Área de Trabalho/dia 31 audio mid/DSC_0023.MOV</property>
+  <property name="meta.media.nb_streams">2</property>
+  <property name="meta.media.0.stream.type">video</property>
+  <property name="meta.media.0.stream.frame_rate">25</property>
+  <property name="meta.media.0.stream.sample_aspect_ratio">0</property>
+  <property name="meta.media.0.codec.width">1280</property>
+  <property name="meta.media.0.codec.height">720</property>
+  <property name="meta.media.0.codec.frame_rate">25</property>
+  <property name="meta.media.0.codec.pix_fmt">yuvj420p</property>
+  <property name="meta.media.0.codec.sample_aspect_ratio">1</property>
+  <property name="meta.media.0.codec.colorspace">601</property>
+  <property name="meta.media.0.codec.name">h264</property>
+  <property name="meta.media.0.codec.long_name">H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10</property>
+  <property name="meta.media.0.codec.bit_rate">10379009</property>
+  <property name="meta.attr.0.stream.creation_time.markup">2009-10-07 19:07:35</property>
+  <property name="meta.attr.0.stream.language.markup">eng</property>
+  <property name="meta.media.1.stream.type">audio</property>
+  <property name="meta.media.1.codec.sample_fmt">s16</property>
+  <property name="meta.media.1.codec.sample_rate">24000</property>
+  <property name="meta.media.1.codec.channels">1</property>
+  <property name="meta.media.1.codec.name">pcm_s16le</property>
+  <property name="meta.media.1.codec.long_name">PCM signed 16-bit little-endian</property>
+  <property name="meta.media.1.codec.bit_rate">0</property>
+  <property name="meta.attr.1.stream.creation_time.markup">2009-10-07 19:07:35</property>
+  <property name="meta.attr.1.stream.language.markup">eng</property>
+  <property name="meta.attr.major_brand.markup">qt  </property>
+  <property name="meta.attr.minor_version.markup">537331968</property>
+  <property name="meta.attr.compatible_brands.markup">qt  niko</property>
+  <property name="meta.attr.creation_time.markup">2009-10-07 19:07:35</property>
+  <property name="seekable">1</property>
+  <property name="meta.media.sample_aspect_num">1</property>
+  <property name="meta.media.sample_aspect_den">1</property>
+  <property name="aspect_ratio">1</property>
+  <property name="audio_index">1</property>
+  <property name="video_index">0</property>
+  <property name="mlt_service">avformat</property>
+  <property name="meta.media.frame_rate_num">25</property>
+  <property name="meta.media.frame_rate_den">1</property>
+  <property name="meta.media.colorspace">601</property>
+  <property name="meta.media.width">1280</property>
+  <property name="meta.media.height">720</property>
+  <property name="meta.media.top_field_first">0</property>
+  <property name="meta.media.progressive">1</property>
+ </producer>
+ <producer in="0" out="457" id="11">
+  <property name="mlt_type">producer</property>
+  <property name="length">458</property>
+  <property name="eof">pause</property>
+  <property name="resource">Área de Trabalho/dia 31 audio mid/DSC_0027.MOV</property>
+  <property name="meta.media.nb_streams">2</property>
+  <property name="meta.media.0.stream.type">video</property>
+  <property name="meta.media.0.stream.frame_rate">25</property>
+  <property name="meta.media.0.stream.sample_aspect_ratio">0</property>
+  <property name="meta.media.0.codec.width">1280</property>
+  <property name="meta.media.0.codec.height">720</property>
+  <property name="meta.media.0.codec.frame_rate">25</property>
+  <property name="meta.media.0.codec.pix_fmt">yuvj420p</property>
+  <property name="meta.media.0.codec.sample_aspect_ratio">1</property>
+  <property name="meta.media.0.codec.colorspace">601</property>
+  <property name="meta.media.0.codec.name">h264</property>
+  <property name="meta.media.0.codec.long_name">H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10</property>
+  <property name="meta.media.0.codec.bit_rate">10580389</property>
+  <property name="meta.attr.0.stream.creation_time.markup">2009-10-07 19:13:32</property>
+  <property name="meta.attr.0.stream.language.markup">eng</property>
+  <property name="meta.media.1.stream.type">audio</property>
+  <property name="meta.media.1.codec.sample_fmt">s16</property>
+  <property name="meta.media.1.codec.sample_rate">24000</property>
+  <property name="meta.media.1.codec.channels">1</property>
+  <property name="meta.media.1.codec.name">pcm_s16le</property>
+  <property name="meta.media.1.codec.long_name">PCM signed 16-bit little-endian</property>
+  <property name="meta.media.1.codec.bit_rate">0</property>
+  <property name="meta.attr.1.stream.creation_time.markup">2009-10-07 19:13:32</property>
+  <property name="meta.attr.1.stream.language.markup">eng</property>
+  <property name="meta.attr.major_brand.markup">qt  </property>
+  <property name="meta.attr.minor_version.markup">537331968</property>
+  <property name="meta.attr.compatible_brands.markup">qt  niko</property>
+  <property name="meta.attr.creation_time.markup">2009-10-07 19:13:32</property>
+  <property name="seekable">1</property>
+  <property name="meta.media.sample_aspect_num">1</property>
+  <property name="meta.media.sample_aspect_den">1</property>
+  <property name="aspect_ratio">1</property>
+  <property name="audio_index">1</property>
+  <property name="video_index">0</property>
+  <property name="mlt_service">avformat</property>
+  <property name="meta.media.frame_rate_num">25</property>
+  <property name="meta.media.frame_rate_den">1</property>
+  <property name="meta.media.colorspace">601</property>
+  <property name="meta.media.width">1280</property>
+  <property name="meta.media.height">720</property>
+  <property name="meta.media.top_field_first">0</property>
+  <property name="meta.media.progressive">1</property>
+ </producer>
+ <producer in="0" out="522" id="10">
+  <property name="mlt_type">producer</property>
+  <property name="length">523</property>
+  <property name="eof">pause</property>
+  <property name="resource">Área de Trabalho/dia 31 audio mid/DSC_0026.MOV</property>
+  <property name="meta.media.nb_streams">2</property>
+  <property name="meta.media.0.stream.type">video</property>
+  <property name="meta.media.0.stream.frame_rate">25</property>
+  <property name="meta.media.0.stream.sample_aspect_ratio">0</property>
+  <property name="meta.media.0.codec.width">1280</property>
+  <property name="meta.media.0.codec.height">720</property>
+  <property name="meta.media.0.codec.frame_rate">25</property>
+  <property name="meta.media.0.codec.pix_fmt">yuvj420p</property>
+  <property name="meta.media.0.codec.sample_aspect_ratio">1</property>
+  <property name="meta.media.0.codec.colorspace">601</property>
+  <property name="meta.media.0.codec.name">h264</property>
+  <property name="meta.media.0.codec.long_name">H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10</property>
+  <property name="meta.media.0.codec.bit_rate">10970664</property>
+  <property name="meta.attr.0.stream.creation_time.markup">2009-10-07 19:12:28</property>
+  <property name="meta.attr.0.stream.language.markup">eng</property>
+  <property name="meta.media.1.stream.type">audio</property>
+  <property name="meta.media.1.codec.sample_fmt">s16</property>
+  <property name="meta.media.1.codec.sample_rate">24000</property>
+  <property name="meta.media.1.codec.channels">1</property>
+  <property name="meta.media.1.codec.name">pcm_s16le</property>
+  <property name="meta.media.1.codec.long_name">PCM signed 16-bit little-endian</property>
+  <property name="meta.media.1.codec.bit_rate">0</property>
+  <property name="meta.attr.1.stream.creation_time.markup">2009-10-07 19:12:28</property>
+  <property name="meta.attr.1.stream.language.markup">eng</property>
+  <property name="meta.attr.major_brand.markup">qt  </property>
+  <property name="meta.attr.minor_version.markup">537331968</property>
+  <property name="meta.attr.compatible_brands.markup">qt  niko</property>
+  <property name="meta.attr.creation_time.markup">2009-10-07 19:12:28</property>
+  <property name="seekable">1</property>
+  <property name="meta.media.sample_aspect_num">1</property>
+  <property name="meta.media.sample_aspect_den">1</property>
+  <property name="aspect_ratio">1</property>
+  <property name="audio_index">1</property>
+  <property name="video_index">0</property>
+  <property name="mlt_service">avformat</property>
+  <property name="meta.media.frame_rate_num">25</property>
+  <property name="meta.media.frame_rate_den">1</property>
+  <property name="meta.media.colorspace">601</property>
+  <property name="meta.media.width">1280</property>
+  <property name="meta.media.height">720</property>
+  <property name="meta.media.top_field_first">0</property>
+  <property name="meta.media.progressive">1</property>
+ </producer>
+ <producer in="0" out="381" id="7">
+  <property name="mlt_type">producer</property>
+  <property name="length">382</property>
+  <property name="eof">pause</property>
+  <property name="resource">Área de Trabalho/dia 31 audio mid/DSC_0024.MOV</property>
+  <property name="meta.media.nb_streams">2</property>
+  <property name="meta.media.0.stream.type">video</property>
+  <property name="meta.media.0.stream.frame_rate">25</property>
+  <property name="meta.media.0.stream.sample_aspect_ratio">0</property>
+  <property name="meta.media.0.codec.width">1280</property>
+  <property name="meta.media.0.codec.height">720</property>
+  <property name="meta.media.0.codec.frame_rate">25</property>
+  <property name="meta.media.0.codec.pix_fmt">yuvj420p</property>
+  <property name="meta.media.0.codec.sample_aspect_ratio">1</property>
+  <property name="meta.media.0.codec.colorspace">601</property>
+  <property name="meta.media.0.codec.name">h264</property>
+  <property name="meta.media.0.codec.long_name">H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10</property>
+  <property name="meta.media.0.codec.bit_rate">11213103</property>
+  <property name="meta.attr.0.stream.creation_time.markup">2009-10-07 19:09:24</property>
+  <property name="meta.attr.0.stream.language.markup">eng</property>
+  <property name="meta.media.1.stream.type">audio</property>
+  <property name="meta.media.1.codec.sample_fmt">s16</property>
+  <property name="meta.media.1.codec.sample_rate">24000</property>
+  <property name="meta.media.1.codec.channels">1</property>
+  <property name="meta.media.1.codec.name">pcm_s16le</property>
+  <property name="meta.media.1.codec.long_name">PCM signed 16-bit little-endian</property>
+  <property name="meta.media.1.codec.bit_rate">0</property>
+  <property name="meta.attr.1.stream.creation_time.markup">2009-10-07 19:09:24</property>
+  <property name="meta.attr.1.stream.language.markup">eng</property>
+  <property name="meta.attr.major_brand.markup">qt  </property>
+  <property name="meta.attr.minor_version.markup">537331968</property>
+  <property name="meta.attr.compatible_brands.markup">qt  niko</property>
+  <property name="meta.attr.creation_time.markup">2009-10-07 19:09:24</property>
+  <property name="seekable">1</property>
+  <property name="meta.media.sample_aspect_num">1</property>
+  <property name="meta.media.sample_aspect_den">1</property>
+  <property name="aspect_ratio">1</property>
+  <property name="audio_index">1</property>
+  <property name="video_index">0</property>
+  <property name="mlt_service">avformat</property>
+  <property name="meta.media.frame_rate_num">25</property>
+  <property name="meta.media.frame_rate_den">1</property>
+  <property name="meta.media.colorspace">601</property>
+  <property name="meta.media.width">1280</property>
+  <property name="meta.media.height">720</property>
+  <property name="meta.media.top_field_first">0</property>
+  <property name="meta.media.progressive">1</property>
+ </producer>
+ <playlist id="playlist5">
+  <entry in="102" out="229" producer="3">
+   <filter id="filter0">
+    <property name="track">0</property>
+    <property name="argument">APLICATIVO SENSORIAL </property>
+    <property name="geometry">0/0:1440x1080:100</property>
+    <property name="family">DejaVu Sans</property>
+    <property name="size">141</property>
+    <property name="weight">887</property>
+    <property name="fgcolour">0x000000ff</property>
+    <property name="bgcolour">0xff8000ff</property>
+    <property name="olcolour">0xff8000ff</property>
+    <property name="pad">0</property>
+    <property name="halign">left</property>
+    <property name="valign">top</property>
+    <property name="outline">0</property>
+    <property name="mlt_type">filter</property>
+    <property name="mlt_service">dynamictext</property>
+    <property name="kdenlive_id">dynamictext</property>
+    <property name="tag">dynamictext</property>
+    <property name="kdenlive_ix">1</property>
+    <property name="kdenlive_info"/>
+   </filter>
+  </entry>
+  <entry in="0" out="82" producer="5">
+   <filter id="filter1">
+    <property name="track">0</property>
+    <property name="argument">SENSOR PIR</property>
+    <property name="geometry">0/0:1440x1080:100</property>
+    <property name="family">Ubuntu</property>
+    <property name="size">195</property>
+    <property name="weight">865</property>
+    <property name="fgcolour">0x000000ff</property>
+    <property name="bgcolour">0xff8000ff</property>
+    <property name="olcolour">0x00000000</property>
+    <property name="pad">0</property>
+    <property name="halign">left</property>
+    <property name="valign">top</property>
+    <property name="outline">0</property>
+    <property name="mlt_type">filter</property>
+    <property name="mlt_service">dynamictext</property>
+    <property name="kdenlive_id">dynamictext</property>
+    <property name="tag">dynamictext</property>
+    <property name="kdenlive_ix">1</property>
+    <property name="kdenlive_info"/>
+   </filter>
+  </entry>
+  <entry in="0" out="457" producer="11">
+   <filter id="filter2">
+    <property name="track">0</property>
+    <property name="argument">BATERIA DE LITIO</property>
+    <property name="geometry">0/0:1440x1080:100</property>
+    <property name="family">Ubuntu</property>
+    <property name="size">196</property>
+    <property name="weight">871</property>
+    <property name="fgcolour">0x000000ff</property>
+    <property name="bgcolour">0xff8000ff</property>
+    <property name="olcolour">0x00000000</property>
+    <property name="pad">12</property>
+    <property name="halign">right</property>
+    <property name="valign">bottom</property>
+    <property name="outline">2</property>
+    <property name="mlt_type">filter</property>
+    <property name="mlt_service">dynamictext</property>
+    <property name="kdenlive_id">dynamictext</property>
+    <property name="tag">dynamictext</property>
+    <property name="kdenlive_ix">1</property>
+    <property name="kdenlive_info"/>
+    <property name="disable">1</property>
+   </filter>
+  </entry>
+  <entry in="0" out="89" producer="10"/>
+  <entry in="0" out="70" producer="7"/>
+ </playlist>
+ <tractor title="Anonymous Submission" global_feed="1" in="0" out="1257" id="maintractor">
+  <property name="meta.volume">1</property>
+  <track producer="black_track"/>
+  <track hide="video" producer="playlist1"/>
+  <track hide="video" producer="playlist2"/>
+  <track producer="playlist3"/>
+  <track producer="playlist4"/>
+  <track hide="audio" producer="playlist5"/>
+  <transition id="transition0">
+   <property name="a_track">1</property>
+   <property name="b_track">2</property>
+   <property name="mlt_type">transition</property>
+   <property name="mlt_service">mix</property>
+   <property name="always_active">1</property>
+   <property name="combine">1</property>
+   <property name="internal_added">237</property>
+  </transition>
+  <transition id="transition1">
+   <property name="a_track">1</property>
+   <property name="b_track">3</property>
+   <property name="mlt_type">transition</property>
+   <property name="mlt_service">mix</property>
+   <property name="always_active">1</property>
+   <property name="combine">1</property>
+   <property name="internal_added">237</property>
+  </transition>
+  <transition id="transition2">
+   <property name="a_track">1</property>
+   <property name="b_track">4</property>
+   <property name="mlt_type">transition</property>
+   <property name="mlt_service">mix</property>
+   <property name="always_active">1</property>
+   <property name="combine">1</property>
+   <property name="internal_added">237</property>
+  </transition>
+  <transition id="transition3">
+   <property name="a_track">1</property>
+   <property name="b_track">5</property>
+   <property name="mlt_type">transition</property>
+   <property name="mlt_service">mix</property>
+   <property name="always_active">1</property>
+   <property name="combine">1</property>
+   <property name="internal_added">237</property>
+  </transition>
+ </tractor>
+ <kdenlivedoc profile="hdv_1080_50i" kdenliveversion="0.9.6" version="0,88" projectfolder="/home/livre/kdenlive">
+  <customeffects/>
+  <documentproperties documentid="1428004458336" renderdestination="" renderrescalewidth="320" proxyextension="ts" generateproxy="0" proxyimageminsize="2000" rendertctype="0" verticalzoom="1" renderprofile="MPEG-4/AAC" renderrescaleheight="240" zonein="0" renderrescale="0" renderscanning="0" renderurl="/media/livre/MOT/DE LIXO EMPREENDIMENTO/Fotos do Hardware/Aplicativo sensorial .mp4" rendertwopass="0" renderplay="0" position="0" proxyminsize="1000" renderstartguide="-1" zoom="7" renderratio="0" rendercategory="MPEG-4" zoneout="100" renderzone="0" renderendguide="-1" renderexportaudio="0" proxyparams="-f mpegts -acodec libmp3lame -ac 2 -ab 128k -ar 48000 -vcodec mpeg2video -g 5 -deinterlace -s 480x270 -vb 400k" enableproxy="0" generateimageproxy="0" renderguide="0" rendertcoverlay="0"/>
+  <documentmetadata/>
+  <documentnotes>&lt;!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN" "http://www.w3.org/TR/REC-html40/strict.dtd">
+&lt;html>&lt;head>&lt;meta name="qrichtext" content="1" />&lt;style type="text/css">
+p, li { white-space: pre-wrap; }
+&lt;/style>&lt;/head>&lt;body style=" font-family:'Sans Serif'; font-size:8pt; font-weight:400; font-style:normal;">
+&lt;p style="-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">&lt;br />&lt;/p>&lt;/body>&lt;/html></documentnotes>
+  <profileinfo width="1440" display_aspect_den="9" frame_rate_den="1" description="HDV 1440x1080i 25 fps" height="1080" frame_rate_num="25" display_aspect_num="16" progressive="0" sample_aspect_num="4" sample_aspect_den="3"/>
+  <tracksinfo>
+   <trackinfo blind="1" mute="0" locked="0" trackname="Audio 2" type="audio"/>
+   <trackinfo blind="1" mute="0" locked="0" trackname="Audio 1" type="audio"/>
+   <trackinfo blind="0" mute="0" locked="0" trackname="Video 3"/>
+   <trackinfo blind="0" mute="0" locked="0" trackname="Video 2"/>
+   <trackinfo blind="0" mute="1" locked="0" trackname="Video 1"/>
+  </tracksinfo>
+  <folder opened="1" id="1" name="vieos"/>
+  <kdenlive_producer audio_max="14" id="1" pix_fmt="yuvj420p" default_video="0" fps="25" analysisdata="" name="DSC_002.MOV" videocodecid="h264" colorspace="601" videocodec="H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10" resource="/home/livre/Área de Trabalho/dia 31 audio mid/DSC_002.MOV" default_audio="1" audiocodec="PCM signed 16-bit little-endian" duration="581" groupid="1" file_hash="2790632193b0df2ce201d1212a0a7c12" aspect_ratio="1" channels="1" frequency="24000" video_max="0" progressive="1" groupname="vieos" type="3" frame_size="1280x720" file_size="31440609">
+   <metaproperty tool="" name="meta.attr.0.stream.creation_time">2009-10-06 18:36:34</metaproperty>
+   <metaproperty tool="" name="meta.attr.0.stream.language">eng</metaproperty>
+   <metaproperty tool="" name="meta.attr.1.stream.creation_time">2009-10-06 18:36:34</metaproperty>
+   <metaproperty tool="" name="meta.attr.1.stream.language">eng</metaproperty>
+   <metaproperty tool="" name="meta.attr.compatible_brands">qt  niko</metaproperty>
+   <metaproperty tool="" name="meta.attr.creation_time">2009-10-06 18:36:34</metaproperty>
+   <metaproperty tool="" name="meta.attr.major_brand">qt  </metaproperty>
+   <metaproperty tool="" name="meta.attr.minor_version">537331968</metaproperty>
+  </kdenlive_producer>
+  <kdenlive_producer duration="125" frame_size="3456x2304" in="0" analysisdata="" file_size="2273743" groupid="1" aspect_ratio="1" out="124" groupname="vieos" file_hash="89c627a8edce35a0ee005587f295fb12" type="5" id="2" name="DSC_0022.JPG" resource="/home/livre/Área de Trabalho/dia 31 audio mid/DSC_0022.JPG">
+   <metaproperty tool="KDE Metadata" name="meta.attr.apertureValue">236894/65536</metaproperty>
+   <metaproperty tool="KDE Metadata" name="meta.attr.contentCreated">1086144489</metaproperty>
+   <metaproperty tool="KDE Metadata" name="meta.attr.contentSize">65536</metaproperty>
+   <metaproperty tool="KDE Metadata" name="meta.attr.exposureBiasValue">0/6</metaproperty>
+   <metaproperty tool="KDE Metadata" name="meta.attr.exposureTime">10/600</metaproperty>
+   <metaproperty tool="KDE Metadata" name="meta.attr.fileName">DSC_0022.JPG</metaproperty>
+   <metaproperty tool="KDE Metadata" name="meta.attr.flash">16</metaproperty>
+   <metaproperty tool="KDE Metadata" name="meta.attr.focalLength">180/10</metaproperty>
+   <metaproperty tool="KDE Metadata" name="meta.attr.focalLengthIn35mmFilm">27</metaproperty>
+   <metaproperty tool="KDE Metadata" name="meta.attr.height">2304</metaproperty>
+   <metaproperty tool="KDE Metadata" name="meta.attr.isPartOf"></metaproperty>
+   <metaproperty tool="KDE Metadata" name="meta.attr.isoSpeedRatings">3200</metaproperty>
+   <metaproperty tool="KDE Metadata" name="meta.attr.lastModified">1254864234</metaproperty>
+   <metaproperty tool="KDE Metadata" name="meta.attr.make">NIKON CORPORATION</metaproperty>
+   <metaproperty tool="KDE Metadata" name="meta.attr.meteringMode">5</metaproperty>
+   <metaproperty tool="KDE Metadata" name="meta.attr.mimeType">image/jpeg</metaproperty>
+   <metaproperty tool="KDE Metadata" name="meta.attr.model">NIKON D3100</metaproperty>
+   <metaproperty tool="KDE Metadata" name="meta.attr.orientation">1</metaproperty>
+   <metaproperty tool="KDE Metadata" name="meta.attr.type">http://www.semanticdesktop.org/ontologies/2007/05/10/nexif#Photo</metaproperty>
+   <metaproperty tool="KDE Metadata" name="meta.attr.url">/home/livre/Área de Trabalho/dia 31 audio mid/DSC_0022.JPG</metaproperty>
+   <metaproperty tool="KDE Metadata" name="meta.attr.whiteBalance">0</metaproperty>
+   <metaproperty tool="KDE Metadata" name="meta.attr.width">3456</metaproperty>
+  </kdenlive_producer>
+  <kdenlive_producer audio_max="26" id="3" pix_fmt="yuvj420p" default_video="0" fps="25" analysisdata="" name="DSC_0022.MOV" videocodecid="h264" colorspace="601" videocodec="H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10" resource="/home/livre/Área de Trabalho/dia 31 audio mid/DSC_0022.MOV" default_audio="1" audiocodec="PCM signed 16-bit little-endian" duration="500" groupid="1" file_hash="4b5442e7440652fb0fa1ce749bd65da0" aspect_ratio="1" channels="1" frequency="24000" video_max="0" progressive="1" groupname="vieos" type="3" frame_size="1280x720" file_size="27861178">
+   <metaproperty tool="" name="meta.attr.0.stream.creation_time">2009-10-07 19:05:59</metaproperty>
+   <metaproperty tool="" name="meta.attr.0.stream.language">eng</metaproperty>
+   <metaproperty tool="" name="meta.attr.1.stream.creation_time">2009-10-07 19:05:59</metaproperty>
+   <metaproperty tool="" name="meta.attr.1.stream.language">eng</metaproperty>
+   <metaproperty tool="" name="meta.attr.compatible_brands">qt  niko</metaproperty>
+   <metaproperty tool="" name="meta.attr.creation_time">2009-10-07 19:05:59</metaproperty>
+   <metaproperty tool="" name="meta.attr.major_brand">qt  </metaproperty>
+   <metaproperty tool="" name="meta.attr.minor_version">537331968</metaproperty>
+  </kdenlive_producer>
+  <kdenlive_producer duration="125" frame_size="3456x2304" in="0" analysisdata="" file_size="2325757" groupid="1" aspect_ratio="1" out="124" groupname="vieos" file_hash="be6627e643f9cc3a24fc01eb41045af7" type="5" id="4" name="DSC_0023.JPG" resource="/home/livre/Área de Trabalho/dia 31 audio mid/DSC_0023.JPG">
+   <metaproperty tool="KDE Metadata" name="meta.attr.apertureValue">236894/65536</metaproperty>
+   <metaproperty tool="KDE Metadata" name="meta.attr.contentCreated">1086145230</metaproperty>
+   <metaproperty tool="KDE Metadata" name="meta.attr.contentSize">65536</metaproperty>
+   <metaproperty tool="KDE Metadata" name="meta.attr.exposureBiasValue">0/6</metaproperty>
+   <metaproperty tool="KDE Metadata" name="meta.attr.exposureTime">10/500</metaproperty>
+   <metaproperty tool="KDE Metadata" name="meta.attr.fileName">DSC_0023.JPG</metaproperty>
+   <metaproperty tool="KDE Metadata" name="meta.attr.flash">16</metaproperty>
+   <metaproperty tool="KDE Metadata" name="meta.attr.focalLength">180/10</metaproperty>
+   <metaproperty tool="KDE Metadata" name="meta.attr.focalLengthIn35mmFilm">27</metaproperty>
+   <metaproperty tool="KDE Metadata" name="meta.attr.height">2304</metaproperty>
+   <metaproperty tool="KDE Metadata" name="meta.attr.isPartOf"></metaproperty>
+   <metaproperty tool="KDE Metadata" name="meta.attr.isoSpeedRatings">3200</metaproperty>
+   <metaproperty tool="KDE Metadata" name="meta.attr.lastModified">1254864974</metaproperty>
+   <metaproperty tool="KDE Metadata" name="meta.attr.make">NIKON CORPORATION</metaproperty>
+   <metaproperty tool="KDE Metadata" name="meta.attr.meteringMode">5</metaproperty>
+   <metaproperty tool="KDE Metadata" name="meta.attr.mimeType">image/jpeg</metaproperty>
+   <metaproperty tool="KDE Metadata" name="meta.attr.model">NIKON D3100</metaproperty>
+   <metaproperty tool="KDE Metadata" name="meta.attr.orientation">1</metaproperty>
+   <metaproperty tool="KDE Metadata" name="meta.attr.type">http://www.semanticdesktop.org/ontologies/2007/05/10/nexif#Photo</metaproperty>
+   <metaproperty tool="KDE Metadata" name="meta.attr.url">/home/livre/Área de Trabalho/dia 31 audio mid/DSC_0023.JPG</metaproperty>
+   <metaproperty tool="KDE Metadata" name="meta.attr.whiteBalance">0</metaproperty>
+   <metaproperty tool="KDE Metadata" name="meta.attr.width">3456</metaproperty>
+  </kdenlive_producer>
+  <kdenlive_producer audio_max="24" id="5" pix_fmt="yuvj420p" default_video="0" fps="25" analysisdata="" name="DSC_0023.MOV" videocodecid="h264" colorspace="601" videocodec="H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10" resource="/home/livre/Área de Trabalho/dia 31 audio mid/DSC_0023.MOV" default_audio="1" audiocodec="PCM signed 16-bit little-endian" duration="83" groupid="1" file_hash="b3aa5a61344f70b73a0cddc90908bd1f" aspect_ratio="1" channels="1" frequency="24000" video_max="0" progressive="1" groupname="vieos" type="3" frame_size="1280x720" file_size="4472263">
+   <metaproperty tool="" name="meta.attr.0.stream.creation_time">2009-10-07 19:07:35</metaproperty>
+   <metaproperty tool="" name="meta.attr.0.stream.language">eng</metaproperty>
+   <metaproperty tool="" name="meta.attr.1.stream.creation_time">2009-10-07 19:07:35</metaproperty>
+   <metaproperty tool="" name="meta.attr.1.stream.language">eng</metaproperty>
+   <metaproperty tool="" name="meta.attr.compatible_brands">qt  niko</metaproperty>
+   <metaproperty tool="" name="meta.attr.creation_time">2009-10-07 19:07:35</metaproperty>
+   <metaproperty tool="" name="meta.attr.major_brand">qt  </metaproperty>
+   <metaproperty tool="" name="meta.attr.minor_version">537331968</metaproperty>
+  </kdenlive_producer>
+  <kdenlive_producer duration="125" frame_size="3456x2304" in="0" analysisdata="" file_size="2231111" groupid="1" aspect_ratio="1" out="124" groupname="vieos" file_hash="430121e3f2605689f2e6822acdd1d9ec" type="5" id="6" name="DSC_0024.JPG" resource="/home/livre/Área de Trabalho/dia 31 audio mid/DSC_0024.JPG">
+   <metaproperty tool="KDE Metadata" name="meta.attr.apertureValue">315358/65536</metaproperty>
+   <metaproperty tool="KDE Metadata" name="meta.attr.contentCreated">1086145237</metaproperty>
+   <metaproperty tool="KDE Metadata" name="meta.attr.contentSize">65536</metaproperty>
+   <metaproperty tool="KDE Metadata" name="meta.attr.exposureBiasValue">0/6</metaproperty>
+   <metaproperty tool="KDE Metadata" name="meta.attr.exposureTime">10/300</metaproperty>
+   <metaproperty tool="KDE Metadata" name="meta.attr.fileName">DSC_0024.JPG</metaproperty>
+   <metaproperty tool="KDE Metadata" name="meta.attr.flash">16</metaproperty>
+   <metaproperty tool="KDE Metadata" name="meta.attr.focalLength">460/10</metaproperty>
+   <metaproperty tool="KDE Metadata" name="meta.attr.focalLengthIn35mmFilm">69</metaproperty>
+   <metaproperty tool="KDE Metadata" name="meta.attr.height">2304</metaproperty>
+   <metaproperty tool="KDE Metadata" name="meta.attr.isPartOf"></metaproperty>
+   <metaproperty tool="KDE Metadata" name="meta.attr.isoSpeedRatings">3200</metaproperty>
+   <metaproperty tool="KDE Metadata" name="meta.attr.lastModified">1254864982</metaproperty>
+   <metaproperty tool="KDE Metadata" name="meta.attr.make">NIKON CORPORATION</metaproperty>
+   <metaproperty tool="KDE Metadata" name="meta.attr.meteringMode">5</metaproperty>
+   <metaproperty tool="KDE Metadata" name="meta.attr.mimeType">image/jpeg</metaproperty>
+   <metaproperty tool="KDE Metadata" name="meta.attr.model">NIKON D3100</metaproperty>
+   <metaproperty tool="KDE Metadata" name="meta.attr.orientation">1</metaproperty>
+   <metaproperty tool="KDE Metadata" name="meta.attr.type">http://www.semanticdesktop.org/ontologies/2007/05/10/nexif#Photo</metaproperty>
+   <metaproperty tool="KDE Metadata" name="meta.attr.url">/home/livre/Área de Trabalho/dia 31 audio mid/DSC_0024.JPG</metaproperty>
+   <metaproperty tool="KDE Metadata" name="meta.attr.whiteBalance">0</metaproperty>
+   <metaproperty tool="KDE Metadata" name="meta.attr.width">3456</metaproperty>
+  </kdenlive_producer>
+  <kdenlive_producer audio_max="37" id="7" pix_fmt="yuvj420p" default_video="0" fps="25" analysisdata="" name="DSC_0024.MOV" videocodecid="h264" colorspace="601" videocodec="H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10" resource="/home/livre/Área de Trabalho/dia 31 audio mid/DSC_0024.MOV" default_audio="1" audiocodec="PCM signed 16-bit little-endian" duration="382" groupid="1" file_hash="4c283f5352935bf90a1f4b0be7244890" aspect_ratio="1" channels="1" frequency="24000" video_max="0" progressive="1" groupname="vieos" type="3" frame_size="1280x720" file_size="22206706">
+   <metaproperty tool="" name="meta.attr.0.stream.creation_time">2009-10-07 19:09:24</metaproperty>
+   <metaproperty tool="" name="meta.attr.0.stream.language">eng</metaproperty>
+   <metaproperty tool="" name="meta.attr.1.stream.creation_time">2009-10-07 19:09:24</metaproperty>
+   <metaproperty tool="" name="meta.attr.1.stream.language">eng</metaproperty>
+   <metaproperty tool="" name="meta.attr.compatible_brands">qt  niko</metaproperty>
+   <metaproperty tool="" name="meta.attr.creation_time">2009-10-07 19:09:24</metaproperty>
+   <metaproperty tool="" name="meta.attr.major_brand">qt  </metaproperty>
+   <metaproperty tool="" name="meta.attr.minor_version">537331968</metaproperty>
+  </kdenlive_producer>
+  <kdenlive_producer duration="125" frame_size="3456x2304" in="0" analysisdata="" file_size="2214987" groupid="1" aspect_ratio="1" out="124" groupname="vieos" file_hash="563549d4f22740e0b8e859ccf91c5c8c" type="5" id="8" name="DSC_0025.JPG" resource="/home/livre/Área de Trabalho/dia 31 audio mid/DSC_0025.JPG">
+   <metaproperty tool="KDE Metadata" name="meta.attr.apertureValue">315358/65536</metaproperty>
+   <metaproperty tool="KDE Metadata" name="meta.attr.contentCreated">1086145238</metaproperty>
+   <metaproperty tool="KDE Metadata" name="meta.attr.contentSize">65536</metaproperty>
+   <metaproperty tool="KDE Metadata" name="meta.attr.exposureBiasValue">0/6</metaproperty>
+   <metaproperty tool="KDE Metadata" name="meta.attr.exposureTime">10/300</metaproperty>
+   <metaproperty tool="KDE Metadata" name="meta.attr.fileName">DSC_0025.JPG</metaproperty>
+   <metaproperty tool="KDE Metadata" name="meta.attr.flash">16</metaproperty>
+   <metaproperty tool="KDE Metadata" name="meta.attr.focalLength">460/10</metaproperty>
+   <metaproperty tool="KDE Metadata" name="meta.attr.focalLengthIn35mmFilm">69</metaproperty>
+   <metaproperty tool="KDE Metadata" name="meta.attr.height">2304</metaproperty>
+   <metaproperty tool="KDE Metadata" name="meta.attr.isPartOf"></metaproperty>
+   <metaproperty tool="KDE Metadata" name="meta.attr.isoSpeedRatings">3200</metaproperty>
+   <metaproperty tool="KDE Metadata" name="meta.attr.lastModified">1254864982</metaproperty>
+   <metaproperty tool="KDE Metadata" name="meta.attr.make">NIKON CORPORATION</metaproperty>
+   <metaproperty tool="KDE Metadata" name="meta.attr.meteringMode">5</metaproperty>
+   <metaproperty tool="KDE Metadata" name="meta.attr.mimeType">image/jpeg</metaproperty>
+   <metaproperty tool="KDE Metadata" name="meta.attr.model">NIKON D3100</metaproperty>
+   <metaproperty tool="KDE Metadata" name="meta.attr.orientation">1</metaproperty>
+   <metaproperty tool="KDE Metadata" name="meta.attr.type">http://www.semanticdesktop.org/ontologies/2007/05/10/nexif#Photo</metaproperty>
+   <metaproperty tool="KDE Metadata" name="meta.attr.url">/home/livre/Área de Trabalho/dia 31 audio mid/DSC_0025.JPG</metaproperty>
+   <metaproperty tool="KDE Metadata" name="meta.attr.whiteBalance">0</metaproperty>
+   <metaproperty tool="KDE Metadata" name="meta.attr.width">3456</metaproperty>
+  </kdenlive_producer>
+  <kdenlive_producer audio_max="33" id="9" pix_fmt="yuvj420p" default_video="0" fps="25" analysisdata="" name="DSC_0025.MOV" videocodecid="h264" colorspace="601" videocodec="H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10" resource="/home/livre/Área de Trabalho/dia 31 audio mid/DSC_0025.MOV" default_audio="1" audiocodec="PCM signed 16-bit little-endian" duration="263" groupid="1" file_hash="adc6d1df30f87c501b38351b8fb8eb47" aspect_ratio="1" channels="1" frequency="24000" video_max="0" progressive="1" groupname="vieos" type="3" frame_size="1280x720" file_size="15108264">
+   <metaproperty tool="" name="meta.attr.0.stream.creation_time">2009-10-07 19:11:16</metaproperty>
+   <metaproperty tool="" name="meta.attr.0.stream.language">eng</metaproperty>
+   <metaproperty tool="" name="meta.attr.1.stream.creation_time">2009-10-07 19:11:16</metaproperty>
+   <metaproperty tool="" name="meta.attr.1.stream.language">eng</metaproperty>
+   <metaproperty tool="" name="meta.attr.compatible_brands">qt  niko</metaproperty>
+   <metaproperty tool="" name="meta.attr.creation_time">2009-10-07 19:11:16</metaproperty>
+   <metaproperty tool="" name="meta.attr.major_brand">qt  </metaproperty>
+   <metaproperty tool="" name="meta.attr.minor_version">537331968</metaproperty>
+  </kdenlive_producer>
+  <kdenlive_producer audio_max="23" id="10" pix_fmt="yuvj420p" default_video="0" fps="25" analysisdata="" name="DSC_0026.MOV" videocodecid="h264" colorspace="601" videocodec="H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10" resource="/home/livre/Área de Trabalho/dia 31 audio mid/DSC_0026.MOV" default_audio="1" audiocodec="PCM signed 16-bit little-endian" duration="523" groupid="1" file_hash="489111843364cd0a17840ba185f7fcc4" aspect_ratio="1" channels="1" frequency="24000" video_max="0" progressive="1" groupname="vieos" type="3" frame_size="1280x720" file_size="29757495">
+   <metaproperty tool="" name="meta.attr.0.stream.creation_time">2009-10-07 19:12:28</metaproperty>
+   <metaproperty tool="" name="meta.attr.0.stream.language">eng</metaproperty>
+   <metaproperty tool="" name="meta.attr.1.stream.creation_time">2009-10-07 19:12:28</metaproperty>
+   <metaproperty tool="" name="meta.attr.1.stream.language">eng</metaproperty>
+   <metaproperty tool="" name="meta.attr.compatible_brands">qt  niko</metaproperty>
+   <metaproperty tool="" name="meta.attr.creation_time">2009-10-07 19:12:28</metaproperty>
+   <metaproperty tool="" name="meta.attr.major_brand">qt  </metaproperty>
+   <metaproperty tool="" name="meta.attr.minor_version">537331968</metaproperty>
+  </kdenlive_producer>
+  <kdenlive_producer audio_max="30" id="11" pix_fmt="yuvj420p" default_video="0" fps="25" analysisdata="" name="DSC_0027.MOV" videocodecid="h264" colorspace="601" videocodec="H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10" resource="/home/livre/Área de Trabalho/dia 31 audio mid/DSC_0027.MOV" default_audio="1" audiocodec="PCM signed 16-bit little-endian" duration="458" groupid="1" file_hash="7c189a38a8ea068badc87a52ff0f7a5f" aspect_ratio="1" channels="1" frequency="24000" video_max="0" progressive="1" groupname="vieos" type="3" frame_size="1280x720" file_size="25117474">
+   <metaproperty tool="" name="meta.attr.0.stream.creation_time">2009-10-07 19:13:32</metaproperty>
+   <metaproperty tool="" name="meta.attr.0.stream.language">eng</metaproperty>
+   <metaproperty tool="" name="meta.attr.1.stream.creation_time">2009-10-07 19:13:32</metaproperty>
+   <metaproperty tool="" name="meta.attr.1.stream.language">eng</metaproperty>
+   <metaproperty tool="" name="meta.attr.compatible_brands">qt  niko</metaproperty>
+   <metaproperty tool="" name="meta.attr.creation_time">2009-10-07 19:13:32</metaproperty>
+   <metaproperty tool="" name="meta.attr.major_brand">qt  </metaproperty>
+   <metaproperty tool="" name="meta.attr.minor_version">537331968</metaproperty>
+  </kdenlive_producer>
+  <kdenlive_producer audio_max="8" id="12" pix_fmt="yuvj420p" default_video="0" fps="25" analysisdata="" name="DSC_0028.MOV" videocodecid="h264" colorspace="601" videocodec="H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10" resource="/home/livre/Área de Trabalho/dia 31 audio mid/DSC_0028.MOV" default_audio="1" audiocodec="PCM signed 16-bit little-endian" duration="95" groupid="1" file_hash="3b0a40b0561393e7553188359da13a1b" aspect_ratio="1" channels="1" frequency="24000" video_max="0" progressive="1" groupname="vieos" type="3" frame_size="1280x720" file_size="5340426">
+   <metaproperty tool="" name="meta.attr.0.stream.creation_time">2009-10-07 19:14:28</metaproperty>
+   <metaproperty tool="" name="meta.attr.0.stream.language">eng</metaproperty>
+   <metaproperty tool="" name="meta.attr.1.stream.creation_time">2009-10-07 19:14:28</metaproperty>
+   <metaproperty tool="" name="meta.attr.1.stream.language">eng</metaproperty>
+   <metaproperty tool="" name="meta.attr.compatible_brands">qt  niko</metaproperty>
+   <metaproperty tool="" name="meta.attr.creation_time">2009-10-07 19:14:28</metaproperty>
+   <metaproperty tool="" name="meta.attr.major_brand">qt  </metaproperty>
+   <metaproperty tool="" name="meta.attr.minor_version">537331968</metaproperty>
+  </kdenlive_producer>
+  <kdenlive_producer audio_max="17" id="13" pix_fmt="yuvj420p" default_video="0" fps="25" analysisdata="" name="DSC_0029.MOV" videocodecid="h264" colorspace="601" videocodec="H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10" resource="/home/livre/Área de Trabalho/dia 31 audio mid/DSC_0029.MOV" default_audio="1" audiocodec="PCM signed 16-bit little-endian" duration="764" groupid="1" file_hash="61d368006bfa0685954f4929402acbe3" aspect_ratio="1" channels="1" frequency="24000" video_max="0" progressive="1" groupname="vieos" type="3" frame_size="1280x720" file_size="41863137">
+   <metaproperty tool="" name="meta.attr.0.stream.creation_time">2009-10-07 19:14:57</metaproperty>
+   <metaproperty tool="" name="meta.attr.0.stream.language">eng</metaproperty>
+   <metaproperty tool="" name="meta.attr.1.stream.creation_time">2009-10-07 19:14:57</metaproperty>
+   <metaproperty tool="" name="meta.attr.1.stream.language">eng</metaproperty>
+   <metaproperty tool="" name="meta.attr.compatible_brands">qt  niko</metaproperty>
+   <metaproperty tool="" name="meta.attr.creation_time">2009-10-07 19:14:57</metaproperty>
+   <metaproperty tool="" name="meta.attr.major_brand">qt  </metaproperty>
+   <metaproperty tool="" name="meta.attr.minor_version">537331968</metaproperty>
+  </kdenlive_producer>
+  <kdenlive_producer audio_max="14" id="14" pix_fmt="yuvj420p" default_video="0" fps="25" analysisdata="" name="DSC_0030.MOV" videocodecid="h264" colorspace="601" videocodec="H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10" resource="/home/livre/Área de Trabalho/dia 31 audio mid/DSC_0030.MOV" default_audio="1" audiocodec="PCM signed 16-bit little-endian" duration="614" groupid="1" file_hash="f5bc2a330284a27885a8b8f5c37bc038" aspect_ratio="1" channels="1" frequency="24000" video_max="0" progressive="1" groupname="vieos" type="3" frame_size="1280x720" file_size="33048493">
+   <metaproperty tool="" name="meta.attr.0.stream.creation_time">2009-10-07 19:16:53</metaproperty>
+   <metaproperty tool="" name="meta.attr.0.stream.language">eng</metaproperty>
+   <metaproperty tool="" name="meta.attr.1.stream.creation_time">2009-10-07 19:16:53</metaproperty>
+   <metaproperty tool="" name="meta.attr.1.stream.language">eng</metaproperty>
+   <metaproperty tool="" name="meta.attr.compatible_brands">qt  niko</metaproperty>
+   <metaproperty tool="" name="meta.attr.creation_time">2009-10-07 19:16:53</metaproperty>
+   <metaproperty tool="" name="meta.attr.major_brand">qt  </metaproperty>
+   <metaproperty tool="" name="meta.attr.minor_version">537331968</metaproperty>
+  </kdenlive_producer>
+  <kdenlive_producer audio_max="30" id="15" pix_fmt="yuvj420p" default_video="0" fps="25" analysisdata="" name="DSC_0031.MOV" videocodecid="h264" colorspace="601" videocodec="H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10" resource="/home/livre/Área de Trabalho/dia 31 audio mid/DSC_0031.MOV" default_audio="1" audiocodec="PCM signed 16-bit little-endian" duration="428" groupid="1" file_hash="67514806fa57e2d0a79e606265278744" aspect_ratio="1" channels="1" frequency="24000" video_max="0" progressive="1" groupname="vieos" type="3" frame_size="1280x720" file_size="25339741">
+   <metaproperty tool="" name="meta.attr.0.stream.creation_time">2009-10-07 19:21:13</metaproperty>
+   <metaproperty tool="" name="meta.attr.0.stream.language">eng</metaproperty>
+   <metaproperty tool="" name="meta.attr.1.stream.creation_time">2009-10-07 19:21:13</metaproperty>
+   <metaproperty tool="" name="meta.attr.1.stream.language">eng</metaproperty>
+   <metaproperty tool="" name="meta.attr.compatible_brands">qt  niko</metaproperty>
+   <metaproperty tool="" name="meta.attr.creation_time">2009-10-07 19:21:13</metaproperty>
+   <metaproperty tool="" name="meta.attr.major_brand">qt  </metaproperty>
+   <metaproperty tool="" name="meta.attr.minor_version">537331968</metaproperty>
+  </kdenlive_producer>
+  <kdenlive_producer audio_max="21" id="16" pix_fmt="yuvj420p" default_video="0" fps="25" analysisdata="" name="Lixeira Sensitiva.MOV" videocodecid="h264" colorspace="601" videocodec="H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10" resource="/home/livre/Área de Trabalho/dia 31 audio mid/Lixeira Sensitiva.MOV" default_audio="1" audiocodec="PCM signed 16-bit little-endian" duration="668" groupid="1" file_hash="9af1c59c505a1fdce39dd01e6e3d43a0" aspect_ratio="1" channels="1" frequency="24000" video_max="0" progressive="1" groupname="vieos" type="3" frame_size="1280x720" file_size="37286539">
+   <metaproperty tool="" name="meta.attr.0.stream.creation_time">2009-10-06 21:50:32</metaproperty>
+   <metaproperty tool="" name="meta.attr.0.stream.language">eng</metaproperty>
+   <metaproperty tool="" name="meta.attr.1.stream.creation_time">2009-10-06 21:50:32</metaproperty>
+   <metaproperty tool="" name="meta.attr.1.stream.language">eng</metaproperty>
+   <metaproperty tool="" name="meta.attr.compatible_brands">qt  niko</metaproperty>
+   <metaproperty tool="" name="meta.attr.creation_time">2009-10-06 21:50:32</metaproperty>
+   <metaproperty tool="" name="meta.attr.major_brand">qt  </metaproperty>
+   <metaproperty tool="" name="meta.attr.minor_version">537331968</metaproperty>
+  </kdenlive_producer>
+  <markers/>
+  <groups/>
+ </kdenlivedoc>
+</mlt>
